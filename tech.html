@@ -1,0 +1,487 @@
+<!Doctype>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Kashif Raza">
+  <meta name="keywords" content="Personal site, Technologies">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Workings</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="other/extrastyle.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+ <style type="text/css">
+  html{
+   scroll-behavior: smooth;
+  }
+  body{
+	  margin: 0;
+	  padding: 0;
+	  background-color: #eff2c4;
+	  height: 950px;
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+  }
+  .sidenav {
+	  height: 100%;
+	  width: 0;
+	  position: fixed;
+	  z-index: 100;
+	  top: 0;
+	  left: 0;
+	  background-color: #07a0b7;
+	  overflow-x: hidden;
+	  transition: 0.5s;
+	  padding-top: 60px;
+	}
+
+	.sidenav a {
+	  padding: 8px 8px 8px 32px;
+	  text-decoration: none;
+	  font-size: 25px;
+	  color: #f2f2f7;
+	  display: block;
+	  transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+	  color:#bc0d4a;
+	}
+
+	.sidenav .closebtn {
+	  position: absolute;
+	  top: 0;
+	  right: 25px;
+	  font-size: 36px;
+	  margin-left: 50px;
+	}
+	@media screen and (max-height: 550px) {
+	  .sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 18px;}
+	   #insta{
+	   margin-left: 31%;
+	   margin-top: -10px;
+	   display: flex;
+	   justify: center;
+	  }
+	}
+
+  #main {
+	  transition: margin-left .5s;
+	  padding: 16px;
+  }
+
+  header{
+   height: 140px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+
+   background-color: #081026;
+   margin-bottom: 10px;
+   padding: 3px;
+   border-radius: 9px;
+   opacity: 0.85;
+   color: white;
+   font-size: 1.4em;
+  }
+  h2:hover{
+   color: purple;
+   text-shadow: 3px 3px 3px white;
+   font-size: 1.5em;
+   transition: 0.4s;
+  }
+  #menuIcon{
+   margin-left: -15px;
+  }
+  #menuIcon:hover{
+   opacity: 0.9;
+  }
+  #resume-ico:hover{
+    opacity: 0.85;
+  }
+  footer{
+    background-color: #081026;
+	color: white;
+	height: 70px;
+  width: 110%;
+	font-family: Nunito, sans-serif;
+	font-size: 1.2em;
+	margin-bottom: -15px;
+	text-align: center;
+	opacity: 0.85;
+	width: 100%;
+  border-radius: 9px;
+	padding: 10px;
+	margin-top: 30px;
+   }
+   footer p:hover{
+    color: #bc0d4a;
+	transition: 0.4s;
+   }
+   .techStack{
+  height: 500px;
+	width: 72%;
+	position: relative;
+	background-color: white;
+  border-radius: 15px;
+	padding: 4px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  overflow: hidden;
+   }
+  @keyframes fadeIn{
+   from{opacity: 0.1; margin-top: 200px;}
+   to{opacity: 1.0; margin-top: 20px;}
+  }
+  i{
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+  }
+  #planguages{
+    height: 420px;
+  }
+  #webdev{
+   height: 180px;
+  }
+  #othertech{
+    height: 230px;
+  }
+  .mySlides {display:none;}
+  .mySlide {display:none;}
+  summary {
+   background-color: #2CA5F7;
+   padding: 5px;
+   border-radius: 8px;
+   border: 2px solid transparent;
+   color: white;
+   margin-left: auto;
+   margin-right: auto;
+   font-family: Bahnschrift, sans-serif;
+   font-size: 1.6em;
+   font-weight: Bold;
+   outline: none;
+   &:focus {
+     border-color: white;
+   }
+  }
+  summary:hover{
+    box-shadow: 4px 4px 5px slategray;
+    cursor: pointer;
+    color: #B35A89;
+    transition: 0.3s;
+  }
+  details {
+   max-width: 400px;
+   margin-left: auto;
+   margin-right: auto;
+   color: white;
+   font-family: Bahnschrift, sans-serif;
+   box-sizing: border-box;
+   margin-top: 8px;
+   background-color: #2CA5F7;
+   border-radius: 6px;
+  }
+  .content {
+   border-top: none;
+   padding: 10px;
+   border: 2px solid #2DAAFF;
+   border-top: none;
+   font-size: 1.23em;
+  }
+
+  p {
+   margin: 0;
+   padding-bottom: 10px;
+   &:last-child {
+     padding: 0;
+   }
+  }
+  .proj-status{
+    color: #4F4E99;
+  }
+  .loader{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #DCE3E1;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  </style>
+ </head>
+ <body>
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html" >Kashif's Web-Room</a>
+  <a href="#">Blogs</a>
+  <a href="#socialMedia">Social Media Handles</a>
+  <a href="fav.html">Have a look on some of my Favs!</a>
+ </div>
+ <div class="loader">
+  <img src="assets/biker.gif" height="55%" width="60%">
+ </div>
+ <div id="main">
+	 <header>
+	   <h2 style="text-align: center;font-family: Nunito,serif;">My Tech-Background</h2>
+	   <p><a href="index.html" style="text-decoration: none;color:#07a0b7;font-family: Bahnschrift,Cursive;margin-left:5px;">Kashif</a>/<a href="tech.html" class="first-a" style="text-decoration: none;color: #07a0b7;font-family: Bahnschrift,Cursive;margin-left:5px;">Technologies & Projects</a></p>
+	 </header>
+     <span style="cursor:pointer;position:fixed; top: 32%; left: 10px;margin: 5px;" onclick="openNav()"><img src="assets/book.png" height="100px" width="90px" id="menuIcon" title="Menu"></span>
+     <a href="other/resume.pdf" target="_blank"><span style="cursor:pointer;position:fixed; top: 51%; left: 3px;margin: 5px;"><img src="assets/resumeicon.png" height="70px" width="65px" id="resume-ico" title="My Resume 😎"></span></a>
+   <div id="planguages" class="techStack">
+     <p style="font-size: 1.5em;font-family: Bahnschrift;text-align: center;" text-align="center">Programming Languages</p>
+     <i class="devicon-cplusplus-plain colored"></i><div class="level" title="Expert"><div class="expert"></div></div><br>
+     <i class="devicon-c-plain colored"></i><div class="level"><div class="advanced" title="Advanced"></div></div></i><br>
+     <i class="devicon-python-plain-wordmark colored"></i></i><div class="level"><div class="intermediate" title="Intermediate"></div></div>
+	 </div>
+   <div id="webdev" class="techStack">
+      <p style="font-size: 1.5em;font-family: Bahnschrift;text-align: center;" text-align="center">My Web Development Journey Tools!</p>
+
+     <div class="w3-content" style="max-width:150px">
+       <i class="devicon-html5-plain colored mySlides" title="HTML 5"></i>
+       <i class="devicon-css3-plain colored mySlides" title="CSS 3"></i>
+       <i class="devicon-javascript-plain colored mySlides" title="Javascript"></i>
+       <i class="devicon-react-original-wordmark colored mySlides" title="React Framework"></i>
+       <i class="devicon-angularjs-plain colored mySlides" title="Angular js"></i>
+       <i class="devicon-jquery-plain-wordmark colored mySlides" title="jQuery"></i>
+       <i class="devicon-bootstrap-plain colored mySlides" title="Bootstrap 4"></i>
+       <i class="devicon-php-plain colored mySlides" title="PHP (for Server Side)"></i>
+    </div>
+   </div>
+   <div id="othertech" class="techStack">
+     <p style="font-size: 1.5em;font-family: Bahnschrift;text-align: center;" text-align="center">Database Services</p>
+      <i class="devicon-mongodb-plain-wordmark colored"></i>
+       <i class="devicon-mysql-plain-wordmark colored"></i>
+   </div>
+  <div id="myProjects">
+   <p style="font-size: 1.5em;font-family: Bahnschrift;text-align: center;" text-align="center">MY PROJECTS</p>
+
+
+  </div>
+  <details>
+   <summary>Buzzz: A Small Twitter Web App</summary>
+   <div class="content">
+     <p>
+       This is a Small Twitter like web application for short message sharing using Modal View Controller Framework with message posting, sharing, following and unfollowing
+       using PHP, HTML, CSS, BOOTSTRAP, MySQL Database.
+       Use the Buzzz from my GIT-HUB Repository <a href="" style="text-decoration: none; color: #B35A89;font-weight:bold;">Buzzz.</a>
+       <br>Status: <span class="proj-status">Ongoing, 60%</span>
+       <br>Tech-Stack Used: <span class="tech-used">HTML5, PHP, JavaScript, MySQL, Bootstrap, CSS</span>
+     </p>
+   </div>
+   </details>
+   <details>
+    <summary>My Secrets</summary>
+    <div class="content">
+      <p>
+       A MySQL based responsive web app for users personal notes with abilities to sign in
+       using PHP, including multi-functionalities such as saving, deleting, editing, and different color and font family selection.
+       <br>Share your underneath emotions, thoughts with your PC (don't worry it's completely private.)
+       Give it a try: <a href="" style="font-size:1.4em; text-decoration: none; color: #B35A89;font-weight:bold; font-family: Tangerine, 'Cursive';">My Secrets</a>
+       <br>Status: <span class="proj-status">Completed, 100%</span>
+       <br>Tech-Stack Used: <span class="tech-used">React JS, PHP, MySQL</span>
+      </p>
+    </div>
+   </details>
+   <details>
+     <summary>AlgoEye: Algorithm Visualizer App</summary>
+     <div class="content">
+       <p>
+        A python based application to Visualize some interesting and devious Algorithms like Dijksta's Shortest Path finding, Some Sorting Algos like Bubble Sort, Quick Sort, Merge Sort etc.
+        <br>Once completed you can get it from link here: <a href="" style="text-decoration: none; color: #B35A89;font-weight:bold;">AlgoEye</a>
+        <br>Status: <span class="proj-status">Ongoing, 40%</span>
+        <br>Tech-Stack Used: <span class="tech-used">Python</span>
+       </p>
+     </div>
+   </details>
+   <details>
+     <summary>CodePlayer: A Web Text Editor</summary>
+     <div class="content">
+       <p>
+       A HTML text editor webpage with Javascript and Cascading StyleSheet functionalities to enhance your Web Dev Experiance.
+        <br>You can Have a look on it Here:<a href="" style="text-decoration: none; color: #B35A89;font-weight:bold;">CodePlayer</a>
+        <br>Status: <span class="proj-status">Completed, 100%</span>
+        <br>Tech-Stack Used: <span class="tech-used">HTML5, Jquery, CSS</span>
+       </p>
+     </div>
+   </details>
+  <div id="myGit">
+   <p>For More Follow me on: </p><a href="https://github.com/kashif-raza2019" target="_blank" style="text-decoration: none;"><i class="devicon-github-plain-wordmark colored" style="font-size: 2.8em; text-decoration: none;"></i></a>
+  </div>
+  <footer>
+    <p>&copy; Copyrights 2020 for Design by Kashif Raza &hearts;</p>
+  </footer>
+ </div>
+ <script type="text/javascript">
+
+  $(window).on("load", function(){
+   $(".loader").fadeOut(5000);
+
+  });
+     <!--For Side navigation Bar animation--!>
+	  function openNav() {
+	  document.getElementById("mySidenav").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "250px";
+	  document.getElementById("main").style.opacity = "0.56";
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "0";
+	  document.getElementById("main").style.opacity = "1";
+	}
+  //For Web Tech Stack carausel
+  var slideIndex = 0;
+  carousel();
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2500);
+  }
+ //Animation for Details Tag for my Projects Section
+ class Accordion {
+  constructor(el) {
+    // Store the <details> element
+    this.el = el;
+    // Store the <summary> element
+    this.summary = el.querySelector('summary');
+    // Store the <div class="content"> element
+    this.content = el.querySelector('.content');
+
+    // Store the animation object (so we can cancel it if needed)
+    this.animation = null;
+    // Store if the element is closing
+    this.isClosing = false;
+    // Store if the element is expanding
+    this.isExpanding = false;
+    // Detect user clicks on the summary element
+    this.summary.addEventListener('click', (e) => this.onClick(e));
+  }
+
+  onClick(e) {
+    // Stop default behaviour from the browser
+    e.preventDefault();
+    // Add an overflow on the <details> to avoid content overflowing
+    this.el.style.overflow = 'hidden';
+    // Check if the element is being closed or is already closed
+    if (this.isClosing || !this.el.open) {
+      this.open();
+    // Check if the element is being openned or is already open
+    } else if (this.isExpanding || this.el.open) {
+      this.shrink();
+    }
+  }
+
+  shrink() {
+    // Set the element as "being closed"
+    this.isClosing = true;
+
+    // Store the current height of the element
+    const startHeight = `${this.el.offsetHeight}px`;
+    // Calculate the height of the summary
+    const endHeight = `${this.summary.offsetHeight}px`;
+
+    // If there is already an animation running
+    if (this.animation) {
+      // Cancel the current animation
+      this.animation.cancel();
+    }
+
+    // Start a WAAPI animation
+    this.animation = this.el.animate({
+      // Set the keyframes from the startHeight to endHeight
+      height: [startHeight, endHeight]
+    }, {
+      duration: 400,
+      easing: 'ease-out'
+    });
+
+    // When the animation is complete, call onAnimationFinish()
+    this.animation.onfinish = () => this.onAnimationFinish(false);
+    // If the animation is cancelled, isClosing variable is set to false
+    this.animation.oncancel = () => this.isClosing = false;
+  }
+
+  open() {
+    // Apply a fixed height on the element
+    this.el.style.height = `${this.el.offsetHeight}px`;
+    // Force the [open] attribute on the details element
+    this.el.open = true;
+    // Wait for the next frame to call the expand function
+    window.requestAnimationFrame(() => this.expand());
+  }
+
+  expand() {
+    // Set the element as "being expanding"
+    this.isExpanding = true;
+    // Get the current fixed height of the element
+    const startHeight = `${this.el.offsetHeight}px`;
+    // Calculate the open height of the element (summary height + content height)
+    const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight}px`;
+
+    // If there is already an animation running
+    if (this.animation) {
+      // Cancel the current animation
+      this.animation.cancel();
+    }
+
+    // Start a WAAPI animation
+    this.animation = this.el.animate({
+      // Set the keyframes from the startHeight to endHeight
+      height: [startHeight, endHeight]
+    }, {
+      duration: 400,
+      easing: 'ease-out'
+    });
+    // When the animation is complete, call onAnimationFinish()
+    this.animation.onfinish = () => this.onAnimationFinish(true);
+    // If the animation is cancelled, isExpanding variable is set to false
+    this.animation.oncancel = () => this.isExpanding = false;
+  }
+
+  onAnimationFinish(open) {
+    // Set the open attribute based on the parameter
+    this.el.open = open;
+    // Clear the stored animation
+    this.animation = null;
+    // Reset isClosing & isExpanding
+    this.isClosing = false;
+    this.isExpanding = false;
+    // Remove the overflow hidden and the fixed height
+    this.el.style.height = this.el.style.overflow = '';
+    }
+  }
+
+  document.querySelectorAll('details').forEach((el) => {
+    new Accordion(el);
+  });
+  </script>
+ </body>
+
+</html>

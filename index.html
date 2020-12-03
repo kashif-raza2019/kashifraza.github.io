@@ -1,349 +1,403 @@
 <!Doctype>
 <html>
  <head>
-  <title>KASHIF RAZA</title>
-  <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-  <script src="jquery-ui/external/jquery/jquery.js"></script>
-  <script src="jquery-ui/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style type="text/css">
+  <meta charset="UTF-8">
+  <meta name="author" content="Kashif Raza">
+  <meta name="keywords" content="Personal site, Student Site, Resume Site">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kashif Raza</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+ <style type="text/css">
   html{
    scroll-behavior: smooth;
   }
-   #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color:SlateGray ;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 50%;
+  body{
+	  margin: 0;
+	  padding: 0;
+	  background-image: url("assets/ocean.jpg");
+	  height: 950px;
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+  }
+  .sidenav {
+	  height: 100%;
+	  width: 0;
+	  position: fixed;
+	  z-index: 100;
+	  top: 0;
+	  left: 0;
+	  background-color: #07a0b7;
+	  overflow-x: hidden;
+	  transition: 0.5s;
+	  padding-top: 60px;
+	}
+
+	.sidenav a {
+	  padding: 8px 8px 8px 32px;
+	  text-decoration: none;
+	  font-size: 25px;
+	  color: #f2f2f7;
+	  display: block;
+	  transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+	  color:#bc0d4a;
+	}
+
+	.sidenav .closebtn {
+	  position: absolute;
+	  top: 0;
+	  right: 25px;
+	  font-size: 36px;
+	  margin-left: 50px;
+	}
+	@media screen and (max-height: 550px) {
+	  .sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 18px;}
+	  .socialImgs:hover{
+	   opacity: 0.7;
+	   transition: 0.3s;
+	  }
+
+	}
+  .heading{
+   text-align: center;
+   justify: center;
+   item-align: center;
+   font-size: 3em;
+   font-weight: bold;
+   font-family: Courier;
+   color: white;
+   background-color: #081026;
+   padding:0;
+   margin-left:0 auto;
+   margin-right:0 auto;
+   margin-top: -50px;
+   border-radius: 6px;
+   opacity: 0.8;
+  }
+  #myname{
+   text-decoration: none;
+   text-styling: none;
+   color: #f2eded
+  }
+  .crusher{
+   color: #070b33;
+   opacity: 0.8;
+  }
+  .crusher:hover{
+   color: white;
+   transition: 0.2s;
+  }
+  #myname:hover{
+   color:#9917c4;
+   transition: 0.3s;
+  }
+  #briefintro{
+   background-color: white;
+   height: 600px;
+   text-align: center;
+   width: 75.6%;
+   border-radius: 15px;
+   margin: 10px auto;
+   padding-top: 15px;
+   overflow: hidden;
+  }
+  #letme{
+   font-size: 2.6em;
+   font-family: 'Tangerine', serif;
+   cursor: pointer;
+   text-shadow: 4px 4px 4px #aaa;
+   animation-name: fadeIn;
+   animation-duration: 3s;
+   animation-delay: 0s;
+   animation-iteration-count: 2;
+   animation-timing-function: ease-in;
+  }
+  @keyframes fadeIn{
+   0%{opacity: 0;}
+   25%{opacity: 0.25;}
+   50%{opacity: 0.5;}
+   75%{opacity: 0.75;}
+   100%{opacity: 1.0;}
+  }
+  .letmehover:hover{
+   color: #fcb91b;
+   text-shadow: 4px 4px 4px #f791e4;
+   transition: 0.3s;
+  }
+  .arrowimg{
+   justify: left;
+   item-align: left;
+   margin-left: 5px;
+   opacity: 1.0;
+  }
+  .arrowimg:hover{
+   animation-name: tiltEffect;
+   animation-duration: 1s;
+  }
+  @keyframes tiltEffect{
+   0%{transform: rotate(0deg);}
+   25%{transform: rotate(20deg);}
+   50%{transform: rotate(36deg);}
+   75%{transform: rotate(20deg);}
+   100%{transform: rotate(0deg);}
+  }
+  .briefstory{
+   font-size: 1.7em;
+   font-family: Tangerine;
+   text-shadow: 2px 2px 2px #aaa;
+   font-weight: bold;
+   font-stretch: semi-expanded;
+  }
+  #heartimg:hover{
+   animation-name: popup;
+   animation-duration: 0.5s;
+
+  }
+  @keyframes popup{
+   0%{height: 15px; width: 25px;}
+   50%{height: 20px; width: 30px;}
+   75%{height: 24px; width:35px;}
+   100%{height: 20px; width: 30px;}
+  }
+  .other{
+   font-family: Bahnschrift, sans-serif;
+   font-size: 0.8em;
+  }
+  .other:hover{
+   color:#bc0d4a ;
+  }
+  #main {
+	  transition: margin-left .5s;
+	  padding: 16px;
+  }
+  #menuIcon{
+   margin-left: -15px;
+  }
+  #menuIcon:hover{
+   opacity: 0.9;
   }
 
-  #myBtn:hover {
-  background-image: linear-gradient(-45deg, #86dbf9, #bb72e5);
-  border: 1px solid white;
-  }  
-  #topheader{
-    background-image:linear-gradient(to bottom, #122147,#122147,#1b3168);
-    height: 650px;	
+  #socialMedia{
+   background-color: white;
+   height: 600px;
+   width: 75.6%;
+   border-radius: 20px;
+   margin-top: 120px;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+   overflow: hidden;
+  }
+  .socialImgs{
+   margin: 12px;
+  }
+  .socialImgs:hover{
+   opacity: 0.7;
+   transition: 0.3s;
+  }
+  #smheading{
+   text-align: center;
+   font-size: 1.8em;
+   font-weight: bold;
+   margin-top: 15px;
+   font-family: 'Bahnschrift', 'Cursive';
+   text-shadow: 6px 6px 6px #aaa;
+  }
+  #smheading:hover{
+   color: #c11554;
+   text-shadow: 9px 9px 9px #820b35;
+   transition: 0.5s;
+  }
+  #messageBox{
+   height: 500px;
+   width: 74.9%;
+   margin-top: 60px;
+   background-color: white;
+   border-radius: 18px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 10px;
+   item-align: center;
+  }
+  #messagetxt{
+   background-color: black;
+   height: 150px;
+   width: 60%;
+   font-size: 1.4em;
+   margin-left: 20%;
+   margin-right: auto;
+   margin-top: -18px;
+   color: #3eb20c;
+   margin-bottom: 8px;
+   resize: none;
+   placeholder:"Hi! I would like to...";
+   autofocus: on;
+  }
+  .inputData{
+   height: 40px;
+   width: 250px;
+   position: left;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 5px;
+   border-radius: 9px;
+   justify: center;
+   autocomplete: on;
+   font-family:Nunito, Sans-serif;
+   border: 1px solid #07a0b7;
+   background-color: #07a0b7;
+   color: white;
+   font-size: 1.2em;
+  }
+  #gitTxt{
+   text-align: center;
+   font-weight: bold;
+   font-size: 1.4em;
+   font-family: Bahnschrift, sans-serif;
+   text-shadow: 4px 4px 4px #aaa;
+
+  }
+  label{
+   font-size: 1.4em;
+   font-family: Bahnschrift;
+  }
+  .required{
+   color: red;
+  }
+  #submit{
+   height: 60px;
+   width: 200px;
+   background-color: #07a0b7;
+   color: white;
+   font-family: Nunito, sans-serif;
+   font-size: 1.5em;
+   text-align: left;
+   border: 3px slategray solid;
+   font-weight: bold;
+   border-radius: 11px;
+   padding: 0 auto;
+  }
+  #submit:hover{
+   background-color:white ;
+   color: #c11554;
+   border-radius: 14px;
+   border: 3px solid #c11554;
+   transition: 0.6s;
+  }
+   footer{
+    background-color: #081026;
+	color: white;
+	height: 70px;
+	font-family: Nunito, sans-serif;
+	font-size: 1.2em;
+	margin-bottom: -15px;
+	text-align: center;
+	opacity: 0.85;
+	margin-left: -10px;
+	border-radius: 9px;
 	width: 100%;
+	padding: 10px;
+	margin-top: 30px;
    }
-   #headtext{
-    color: white;
-	font-family: Bahnshrift, sans-serif;
-	font-size: 55px;
-	padding-top: 100px;
-	padding-left: 33%;
-	font-stretch: 10%;
-	
+   footer p:hover{
+    color: #bc0d4a;
+	transition: 0.4s;
    }
-   #headname{
-    text-decoration: none;
-	color: #bc0d4a;
+   .loader{
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color:#012243;
+     z-index: 9999;
    }
-  
-   #headname:hover{
-    font-weight: bold;
-	color:white;
-	font-size:57px;
-   }
-   body{
-    padding: 0;
-	margin: 0;
-   }
-   #projectlink{
-	margin-left: 45%;
-	font-family: sans-serif;
-	font-size: 28px;
-	
-   }
-   #myprojectontop{
-	color:#237be0;
-	background-color: white ; 
-	text-decoration: none;
-	padding: 5px;
-   }
-   #myprojectontop:hover{
-	font-size: 28.2px;
-	background-color: #237be0;
-	color: white;
-	border-radius: 1px;
-	border: 2px solid white;
-   }
-   #aboutme{
-    background-image: linear-gradient(-45deg, #86dbf9, #bb72e5);
-	padding: 0;
-	margin:  0;
-	width: 100%;
-	height: 650px;
-	position: relative;
-   }
-   
-   ul{
-    margin: 0px;
-	padding: 0px;
-	color: white;
-	display: flex;
-	
-   }
-   li {
-    list-style: none;
-	margin-left: 12%;
-	margin-right: 12%;
-	margin-top: 90px;
-	
-   }
-   li a{
-    text-decoration: none;
-	font-family: Bahnshrift, sans-serif;
-	font-size: 1.8em;
-	color: white;
-   }
-   li a:hover{
-    color:#37abe5;
-   }
-   .active{
-    color: brown;
-   }
-   #aboutmeheading{
-    font-size: 35px;
-	font-family: Courier, sans-serif;
-	font-weight: bold;
-	color: white;
-	text-align: center;
-	margin: 0px;
-	padding-top: 5px;
-	border-top: 6px solid Gray;
-	
-   }
-   #myprojects{
-    width: 100%;
-	height: 650px;
-	background-color: #ffeae5;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	border-top: 3px solid #FFAB68;
-   }
-   #muprojecttitle{
-    text-align: center;
-	font-family: Ink Free, sans-serif;
-	font-size: 38px;
-	margin-top: 0px;
-	padding-top: 5px;
-	font-weight: bold;
-	color:#071477;
-	
-   }
-   #mydetail{
-    height: 460px;
-	width: 40%;
-	margin: 12px;
-	padding: 5px;
-	background-color: white;
-	font-family: sans-serif;
-	font-weight: bold;
-	font-style: italic;
-	opacity: 0.8;
-	border-radius: 12px;
-	margin-right: 7%;
-	float: left;
-	text-align: center;
-	
-	box-shadow: 10px 10px 5px gray;
-   }
-   #myimg{
-    height: 220px;
-	margin-left:  21%;
-	margin-right: 25%;
-	width: 50%;
-	margin-top: 18px;
-	border-radius: 15px;
-	box-shadow: 6px 6px 8px Gray;
-   }
-   #rankbottomtxt{
-    font-size: 1.2em;
-   }
-	   .checked {
-	  color: orange;
-	}
-	.logo{
-	 height: 80px;
-	 width: 95px;
-	 margin-left: 10px;
-	 float: left;
-	}
-	
-	.fa{
-	 margin-top: 10px;
-	 float: left;
-	}
-   #mytext{
-    height: 460px;
-	width: 43.5%;
-	margin: 12px;
-	padding: 5px;
-	background-color: white;
-	opacity: 0.8;
-	border-radius: 12px;
-	float: left;
-	box-shadow: 10px 10px 5px gray;
-   }
-   #mythought{
-    font-family: Lobster, cursive;
-	font-size: 1.9em;
-	color: Gold;
-	text-align: center;
-   }
-   #academic{
-    font-family: open sans, sans-serif;
-	font-size: 1.4em;
-	margin-left: 5px;
-   }
-   #collegename{
-    margin-top: 15px;
-	font-family: Noto-serif;
-	font-weight: bold;
-	font-size: 1.6em;
-   }
-		.flip-card {
-	  background-color: transparent;
-	  width: 200px;
-	  height: 200px;
-	  perspective: 1000px;
-	  font-family:Ink Free;
-	  margin: auto;
-	}
-
-	.flip-card-inner {
-	  position: relative;
-	  width: 200px;
-	  height: 200px;
-	  text-align: center;
-	  transition: transform 0.6s;
-	  transform-style: preserve-3d;
-	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	
-	}
-
-	.flip-card:hover .flip-card-inner {
-	  transform: rotateY(180deg);
-	}
-
-	.flip-card-front, .flip-card-back {
-	  position: absolute;
-	  width: 200px;
-	  height: 200px;
-	  -webkit-backface-visibility: hidden;
-	  backface-visibility: hidden;
-	  border-radius: 8px;
-	}
-
-	.flip-card-front {
-	  background-color: #842d78;
-	  color: black;
-	  font-family:Ink Free;
-	
-	}
-
-	.flip-card-back {
-	  background-color: #842d78;
-	  color: white;
-	  transform: rotateY(180deg);
-	  font-family:Ink Free;
-	  border-radius: 8px;
-	}
   </style>
  </head>
  <body>
-   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-   <div id="topheader">
-   
-	 <p id="headtext">Hi! There,<br>
-	 I am <a href="#aboutme" id="headname">KASHIF RAZA</a><br>
-	 Welcome to My Web-Portfolio</p>
-	 <div id="projectlink"><a href="#myprojects" id="myprojectontop">My Projects</a></div>
-	 <ul>
-	  <li><a href="#" id="homelink" class="menulink active">Home</a></li>
-	  <li><a href="#aboutme" class="menulink">About Me!</a></li>
-	  <li><a href="#" class="menulink">Contact Me</a></li>
-	 </ul>
-   </div>
-   
-   <div id="aboutme">
-     <div id="aboutmeheading"><p>About Me!</p></div>
-	 
-	 <div id="mydetail">
-		 <div class="flip-card">
-	  <div class="flip-card-inner">
-		<div class="flip-card-front">
-		  <img src="aboutmeimg.jpg" style="width:200px;height:200px;border-radius: 8px;">
-		</div>
-		<div class="flip-card-back">
-		  <h1>KASHIF RAZA</h1> 
-		  <p>Engineering Student</p> 
-		  <p><i>Blader of the Four Season!</i></p>
-		</div>
-	  </div>
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="tech.html">Technologies & Projects</a>
+  <a href="#">Blogs</a>
+  <a href="social.html">Social Media Handles</a>
+  <a href="fav.html">Have a look on some of my Favs!</a>
+ </div>
+ <div class="loader">
+  <img src="assets/lateprogramming.gif" height="50%" width="55%">
+ </div>
+ <div id="main">
+	 <div class="heading">
+	   <p>Hey Fellas!<br>I am<span class="crusher"><</span><a href="" id="myname">Kashif<span class="crusher">/</span>Raza</a><span class="crusher">></span></p>
+	 </div>
+	 <span style="font-size:30px;cursor:pointer;position:fixed;" onclick="openNav()"><img src="assets/book.png" height="100px" width="90px" id="menuIcon" title="Menu"></span>
+	 <div id="briefintro">
+	   <p id="letme"><span class="letmehover">Let</span><span class="letmehover"> me</span> <span class="letmehover">Tell</span><span class="letmehover"> You</span><span class="letmehover"> Briefly</span><span class="letmehover"> about</span><span class="letmehover"> Myself!</span></p>
+		  <div id="shortMyself">
+			  <img src="assets/arrow.png" align = "left" height="40px" width="50px" class="arrowimg"><p class="briefstory">First of All a Warm welcome to all visitors,<br>I am an undergrad student at Institute of Engineering & Technology, IET-DAVV Indore</p>
+			  <img src="assets/arrow.png" align = "left" height="40px" width="50px" class="arrowimg"><p class="briefstory">A Tech-Geek from<br>Electronics and Telecommunication Dept.</p>
+			  <img src="assets/arrow.png" align = "left" height="40px" width="50px" class="arrowimg"><p class="briefstory">And I live in Indore! (<img src="assets/heart.png" height="20px" width="30px" id="heartimg"> for all Indoris)</p>
+			  <img src="assets/arrow.png" align = "left" height="40px" width="50px" class="arrowimg"><p class="briefstory">An Ex-Allenite <span class="other">TER11E</span>,<span class="other"> TNR12A</span><br>(Don't bother for the names!)</p>
+
+		 </div>
+
+	 </div>
+	 <div id="socialMedia">
+	 <p id="smheading">Connect with me on</p><br>
+	    <a href="https://www.linkedin.com/in/kashif-raza-994232189/" class="socialImgs"><img src="assets/linkedin.png" height="110px" width="150" class="socialImgs"title="Linked In"></a>
+		<a href="https://www.instagram.com/kashifrazareal/" class="socialImgs" id="insta"><img src="assets/insta.png" height="95px" width="175" title="Instagram"></a>
+		<a href="https://twitter.com/KashifR67453721" class="socialImgs"><img src="assets/twitter.png" height="110px" width="160" class="socialImgs" title="Twitter"></a>
+		<p id="gitTxt">Have a look on my :</p>
+		<a href="https://github.com/kashif-raza2019" class="socialImgs"><img src="assets/github.png" height="180px" width="250px" style="margin-left: auto;margin-right: auto" align="center" title="Kashif's GITHUB"></a>
+        <a href="#" class="socialImgs"><img src="assets/youtube.jpg" height="140px" width="220px" style="margin-left: auto;margin-right: auto" align="center" title="Kashif's Youtube"></a>
 	</div>
-	   <p>My Rankings as a</p><span id="rankbottomtxt"><p>'Competetive Programmer'</p></span><br>
-	   <img src="hackerranklogo.png" title="Hacker Rank" class="logo"><br>
-	   <span class="fa fa-star checked"></span>
-		 <span class="fa fa-star checked"></span>
-		 <span class="fa fa-star"></span>
-		 <span class="fa fa-star"></span>
-		 <span class="fa fa-star"></span><br><p>More are coming...</p>
-	   
+
+	 <div id="messageBox">
+	   <p style="font-size: 1.8em; font-weight: bold; font-family: Courier; text-align: center">Leave a Message!</p>
+	   <textarea  name="message" id="messagetxt" >Type in your secret message here!
+	   (Suggestions/Advice/Tips/Comment)</textarea><br>
+	   <label for="name" name="flname">Your Name:<span class="required">*</span></label><br>
+	   <input type="text" name="flname" class="inputData" placeholder="Elon Musk"><br>
+	   <label for="email" name="emailAdd">Your E-Mail:<span class="required" >*</span></label><br>
+	   <input type="text" name="emailAdd" class="inputData" placeholder="muskelon@tesla.com">
+	  <p style="font-weight: bold;font-family: Nunito, sans-serif;"><span class="required" >*</span>required</p>
+
+	  <button id="submit" onclick="submit()">Send <img src="assets/plane.png" height="30px" width="58px" title="Send with love :)"></button>
 	 </div>
-	 <div id="mytext">
-	  <div id="mythought"><p></p></div>
-	  <p id="academic">Currently Pursuing:<br><strong>Bachelor's Degree in Engineering (B.E)</strong> from:<br></p>
-	  <img src="ietlogo.png" height="100px" width="125px" align="left" title="IET-DAVV, Indore">
-	  <p id="collegename">Institute of Engineering & Technology, Indore</p>
-	 </div>
-   </div>
-   
-   
-   <div id="myprojects">
-    <div id="muprojecttitle"><p>My Project Work</p></div>
-   </div>
-   
-   
-   
+
+	 <footer>
+	   <p>&copy; Copyrights 2020 for Design by Kashif Raza</p>
+	 </footer>
+ </div>
  <script type="text/javascript">
-	   //For Scroll To Top Button
-	var mybutton = document.getElementById("myBtn");
+   $(window).on("load", function(){
+    $(".loader").fadeOut(7500);
 
-	window.onscroll = function() {scrollFunction()};
-
-	function scrollFunction() {
-	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		mybutton.style.display = "block";
-	  } else {
-		mybutton.style.display = "none";
-	  }
+   });
+     <!--For Side navigation Bar with animation--!>
+	  function openNav() {
+	  document.getElementById("mySidenav").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "250px";
+	  document.getElementById("main").style.opacity = "0.6";
 	}
 
-	function topFunction() {
-	  document.body.scrollTop = 0;
-	  document.documentElement.scrollTop = 0;
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "0";
+	  document.getElementById("main").style.opacity = "1";
 	}
-	//Back to Top Button Finished!
-	<!--Active link toggleing--!>
-	$(".menulink").click(function(){
-	 $(this).toggleClass("active");
-	 $(this).removeClass("active");
-	});
-	<!-- FOR MY QUOTE!--!>
-	document.getElementById("mythought").innerHTML = "&#34Programming is a more Logical way of Expressing Your Ideas Virtually&#34<br>&#8212 Kashif";
  </script>
  </body>
 

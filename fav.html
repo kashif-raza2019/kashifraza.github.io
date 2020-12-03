@@ -1,0 +1,590 @@
+<!Doctype>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Kashif Raza">
+  <meta name="keywords" content="Personal site, Technologies">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favourites</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="other/extrastyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="other/music.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+ <style type="text/css">
+  html{
+   scroll-behavior: smooth;
+  }
+  body{
+	  margin: 0;
+	  padding: 0;
+	  background-color: black;
+	  height: 950px;
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+  }
+  .sidenav {
+	  height: 100%;
+	  width: 0;
+	  position: fixed;
+	  z-index: 100;
+	  top: 0;
+	  left: 0;
+	  background-color: #07a0b7;
+	  overflow-x: hidden;
+	  transition: 0.5s;
+	  padding-top: 60px;
+	}
+
+	.sidenav a {
+	  padding: 8px 8px 8px 32px;
+	  text-decoration: none;
+	  font-size: 25px;
+	  color: #f2f2f7;
+	  display: block;
+	  transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+	  color:#bc0d4a;
+	}
+
+	.sidenav .closebtn {
+	  position: absolute;
+	  top: 0;
+	  right: 25px;
+	  font-size: 36px;
+	  margin-left: 50px;
+	}
+	@media screen and (max-height: 550px) {
+	  .sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 18px;}
+	   #insta{
+	   margin-left: 31%;
+	   margin-top: -10px;
+	   display: flex;
+	   justify: center;
+	  }
+	}
+
+  #main {
+	  transition: margin-left .5s;
+	  padding: 16px;
+  }
+  .music{
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+
+  header{
+   height: 140px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+
+   background-color: #081026;
+   margin-bottom: 10px;
+   padding: 3px;
+   border-radius: 9px;
+   opacity: 0.85;
+   color: white;
+   font-size: 1.4em;
+  }
+  h2:hover{
+   color: purple;
+   text-shadow: 3px 3px 3px white;
+   font-size: 1.5em;
+   transition: 0.4s;
+  }
+  #menuIcon{
+   margin-left: -15px;
+  }
+  #menuIcon:hover{
+   opacity: 0.9;
+  }
+  #marvelLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: slideUp;
+    animation-duration: 2.3s;
+    transition: 2.6s;
+  }
+
+  footer{
+    background-color: #081026;
+	color: white;
+	height: 70px;
+  width: 110%;
+	font-family: Nunito, sans-serif;
+	font-size: 1.2em;
+	margin-bottom: -15px;
+	text-align: center;
+	opacity: 0.85;
+	width: 100%;
+  border-radius: 9px;
+	padding: 10px;
+	margin-top: 30px;
+   }
+   footer p:hover{
+    color: #bc0d4a;
+	transition: 0.4s;
+   }
+   .favHeadTitle{
+     color: white;
+     font-family: Bangers, sans-serif;
+     font-size: 5.4em;
+     text-align: center;
+     margin-top: 20px;
+   }
+
+  .favCards{
+    height: 230px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-left: 70px;
+    float: left;
+  }
+  .about{
+    transition: 0.5s ease;
+    opacity: 0;
+    height: 230px;
+    width: 350px;
+    position: absolute;
+    padding-top: 105px;
+    font-size: 2em;
+    text-align: center;
+    color: #c4c6c6;
+    font-size: 1.5em;
+    font-family: Nunito, sans-serif;
+    overflow:hidden;
+  }
+  .about:hover{
+      opacity: 1;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      animation-name: jumpUp;
+      animation-duration: 0.7s;
+      transition: 0.5s ease-in-out;
+  }
+  @keyframes jumpUp {
+    from{padding-top: 185px;}
+    to{padding-top: 105px;}
+  }
+  @keyframes jumpDown {
+    from{padding-top: 30px}
+    to{padding-top: 105px;}
+  }
+  .overlay{
+    height: 300px;
+    width: 350px;
+    opacity: 0;
+  }
+  .overlay:hover{
+     background: rgba(0,0,0,0.7);
+     opacity: 1;
+     transition: 0.6s ease-in-out;
+  }
+  #avenger{
+    background-image: url("assets/avengers.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #interstellar{
+    background-image: url("assets/interstellar.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #harrypotter{
+    background-image: url("assets/harry.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #sherlock{
+    background-image: url("assets/sherlock.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #narnia{
+    background-image: url("assets/narnia.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #stranger{
+    background-image: url("assets/stranger.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #transformer{
+    background-image: url("assets/transformer.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #enola{
+    background-image: url("assets/enola.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #tenet{
+    background-image: url("assets/tenet.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #hans{
+    background-image: url("assets/hans.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #brian{
+    background-image: url("assets/brian.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #adele{
+    background-image: url("assets/adele.webp");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #taylor{
+    background-image: url("assets/taylor.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #billie{
+    background-image: url("assets/billie.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #sheeran{
+    background-image: url("assets/sheeran.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #shaan{
+    background-image: url("assets/shaan.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #rahman{
+    background-image: url("assets/rahman.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #alan{
+    background-image: url("assets/alan.jpg");
+    background-color: slategray;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .music{
+    height: 400px;
+    width: 80%;
+    display: flex;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border-radius: 15px;
+  }
+  #notime{
+    background-image: url("assets/notimetodie.jpg");
+    background-color: slategray;
+    height: 340px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #police{
+    background-image: url("assets/police.jpg");
+    background-color: slategray;
+    height: 340px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #hello{
+    background-image: url("assets/hello.jpg");
+    background-color: slategray;
+    height: 340px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  </style>
+ </head>
+ <body>
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="tech.html">Technologies & Projects</a>
+  <a href="#">Blogs</a>
+  <a href="social.html">Social Media Handles</a>
+  <a href="fav.html" style="color:#bc0d4a; ">You're on my Fantasy World🤩</a>
+ </div>
+
+ <div id="main">
+	 <header>
+	   <h2 style="text-align: center;font-family: Nunito,serif;">My Fantasy World!</h2>
+	   <p><a href="index.html" style="text-decoration: none;color:#07a0b7;font-family: Bahnschrift,Cursive;margin-left:5px;">Kashif</a>/<a href="tech.html" class="first-a" style="text-decoration: none;color: #07a0b7;font-family: Bahnschrift,Cursive;margin-left:5px;">My Favourites</a></p>
+	 </header>
+     <span style="cursor:pointer;position:fixed; top: 32%; left: 10px;margin: 5px;" onclick="openNav()"><img src="assets/book.png" height="100px" width="90px" id="menuIcon" title="Menu"></span>
+
+     <img src="assets/marvelstudios.png" height="200px" width="80%" align="center" id="marvelLogo" title="&copy; 2020 Marvel Studios ">
+    <p class="favHeadTitle">MY FAVOURITE MOVIES</p>
+    <div class="favCards" id="avenger">
+      <div class="overlay">
+        <div class="about" >
+         <p>INFINITY SAGA | MCU</p>
+      </div>
+     </div>
+    </div>
+    <div class="favCards" id="interstellar">
+      <div class="overlay">
+        <div class="about" >
+         <p>INTERSTELLAR</p>
+      </div>
+    </div>
+    </div>
+    <div class="favCards" id="harrypotter">
+      <div class="overlay">
+        <div class="about" >
+         <p>Harry Potter Series</p>
+      </div>
+    </div>
+    </div>
+    <div class="favCards" id="sherlock">
+      <div class="overlay">
+        <div class="about" >
+         <p>SHERLOCK HOLMES</p>
+      </div>
+    </div>
+    </div>
+    <div class="favCards" id="narnia">
+      <div class="overlay">
+        <div class="about" >
+         <p>The Chronicals of<br>Narnia</p>
+      </div>
+    </div>
+    </div>
+    <div class="favCards" id="stranger">
+      <div class="overlay">
+        <div class="about" >
+         <p>Netflix<br>Stranger Things</p>
+      </div>
+    </div>
+    </div>
+    <div class="favCards" id="transformer">
+      <div class="overlay">
+        <div class="about" >
+         <p>Transformers Series</p>
+      </div>
+    </div>
+    </div>
+    <div class="favCards" id="enola">
+      <div class="overlay">
+        <div class="about" >
+         <p>Netflix<br>Enola Holmes</p>
+      </div>
+    </div>
+    </div>
+    <div class="favCards" id="tenet">
+      <div class="overlay">
+        <div class="about" >
+         <p>TENET 2020</p>
+      </div>
+    </div>
+    </div>
+ <br>
+ <p style="font-size: 5.4em; font-family: Bangers, Cursive; color: white; text-align: center; margin-left: 40px; float: none;">Favourite Artists</p>
+   <div class="favCards" id="hans">
+     <div class="overlay">
+       <div class="about" >
+        <p>Hans Zimmer<br>Musician</p>
+     </div>
+    </div>
+   </div>
+   <div class="favCards" id="brian">
+     <div class="overlay">
+       <div class="about" >
+        <p>Brian Tyler<br>Musician</p>
+     </div>
+    </div>
+   </div>
+   <div class="favCards" id="adele">
+     <div class="overlay">
+       <div class="about" >
+        <p>Adele<br>Singer</p>
+     </div>
+    </div>
+   </div>
+   <div class="favCards" id="taylor">
+     <div class="overlay">
+       <div class="about" >
+        <p>Taylor Swift<br>Singer</p>
+     </div>
+    </div>
+   </div>
+   <div class="favCards" id="billie">
+     <div class="overlay">
+       <div class="about" >
+        <p>Billie Eilish<br>Singer</p>
+     </div>
+    </div>
+   </div>
+   <div class="favCards" id="sheeran">
+     <div class="overlay">
+       <div class="about" >
+        <p>Ed Sheeran<br>Singer</p>
+     </div>
+    </div>
+   </div>
+
+   <div class="favCards" id="shaan">
+     <div class="overlay">
+       <div class="about" >
+        <p>Shaan<br>Singer</p>
+     </div>
+    </div>
+   </div>
+   <div class="favCards" id="rahman">
+     <div class="overlay">
+       <div class="about" >
+        <p>A.R Rahman<br>Singer</p>
+     </div>
+    </div>
+   </div>
+   <div class="favCards" id="alan">
+     <div class="overlay">
+       <div class="about" >
+        <p>Alan Silvestri<br>Marvel Musician</p>
+     </div>
+    </div>
+  </div>
+
+ </div>
+ <div class="music">
+   <article id="notime">
+     <audio class="audio" controls="controls">
+       <source type="audio/mp3" src="assets/notimetodie.mp3">
+     </audio>
+
+ </div>
+ <div class="music">
+   <article id="police">
+     <audio class="audio" controls="controls">
+       <source type="audio/mp3" src="assets/police.mp3">
+     </audio>
+
+ </div>
+ <div class="music">
+   <article id="hello">
+     <audio class="audio" controls="controls">
+       <source type="audio/mp3" src="assets/hello.mp3">
+     </audio>
+
+ </div>
+ <footer style="opacity: 0.8;">&copy; 2020 Music Rights Reserved by MGM Musics, The Police Band  & Adele<br>Designed & Created by Kashif Raza &hearts;</footer>
+ <script type="text/javascript">
+
+   $('audio').mediaelementplayer({
+   features: ['playpause','progress','current','tracks','fullscreen']
+  });
+  /*$(window).on("load", function(){
+   $(".loader").fadeOut(5000);
+
+ });*/
+     <!--For Side navigation Bar animation--!>
+	  function openNav() {
+	  document.getElementById("mySidenav").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "250px";
+	  document.getElementById("main").style.opacity = "0.56";
+    document.getElementsByClassName("music").style.marginLeft="250px";
+    document.getElementsByClassName("music").style.opacity = "0.56";
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "0";
+	  document.getElementById("main").style.opacity = "1";
+    document.getElementsByClassName("music").style.marginLeft="0px";
+    document.getElementsByClassName("music").style.opacity = "1";
+	}
+
+  </script>
+ </body>
+
+</html>
